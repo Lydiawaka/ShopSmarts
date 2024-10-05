@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSmart - Personal Shopping Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        header {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e74c3c 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #c0392b;
+        }
+        #showcase {
+            min-height: 400px;
+            background: url('/api/placeholder/1200/400') no-repeat center center/cover;
+            text-align: center;
+            color: #333;
+        }
+        #showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        #showcase img {
+            max-width: 300px;
+            height: 20px;
+        }
+        #showcase p {
+            font-size: 20px;
+        }
+        #services {
+            margin-top: 20px;
+        }
+        .service-box {
+            float: left;
+            width: 30%;
+            padding: 10px;
+            text-align: center;
+            background: #fff;
+            margin: 1.66%;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #about {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        #contact {
+            background: #fff;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #contact h2 {
+            text-align: center;
+        }
+        #contact form {
+            display: flex;
+            flex-direction: column;
+        }
+        #contact form input, #contact form textarea {
+            margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        #contact form button {
+            background: #e74c3c;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        #contact form button:hover {
+            background: #c0392b;
+        }
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Shop</span>Smart</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Personal Shopping Services</h1>
+            <p>Tailored shopping experiences for busy individuals</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="service-box">
+                <h3>Grocery Shopping</h3>
+                <img src="smage/glocery.jpeg">
+                <p>We'll handle your weekly grocery run, ensuring you always have fresh, quality products at home.</p>
+            </div>
+            <div class="service-box">
+                <h3>Gift Purchasing</h3>
+                <img src="smage/gifting.jpeg">
+                <p>Let us find the perfect gifts for your loved ones, saving you time and stress.</p>
+            </div>
+            <div class="service-box">
+                <h3>Personal Styling</h3>
+                <img src="smage/clothing.jpeg">
+                <p>Our expert stylists will curate a wardrobe that fits your lifestyle and personal taste.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>ShopSmart provides tailored shopping experiences for busy individuals who lack the time or expertise to shop for themselves. We leverage our passion for shopping and keen sense of customer service to offer convenience and personalized attention, enhancing your shopping experience.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="How can we help you?" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+            <h2>Contact Us</h2>
+            <p>Email: info@ecotechsolutions.com</p>
+            <p>Phone: +254 746 056 315</p>
+        
+        <p>ShopSmart Personal Shopping Services, Copyright &copy; 2024</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message. We will get back to you soon!');
+            this.reset();
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
